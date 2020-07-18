@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <!-- Include in <head> to load fonts from Google -->
+    <link rel='stylesheet' id='avia-google-webfont' href='//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' type='text/css' media='all'/>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Bacha Party</title>
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Include the jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+    <!-- Include the jQuery Mobile library -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+
+<script>
+    function myClosewin() {
+        $("#wrapper").toggleClass("toggled");
+    }
+</script>
+
+</head>
+
+<body>
+
+<!-- Navigation !-->
+<div class="sid-bar">
+
+    <div id="wrapper">
+
+        <div id="sidebar-wrapper">
+
+            <div class="">
+                <div class="row"> <div class="col-xs-12">
+
+                    <ul class="sidebar-nav ">
+                        <li class="sidebar-brand">
+                                Manu<a href="#" data-rel="close" onclick="myClosewin()" data-role="button">
+                            <img class="cls" src="img/cancel.png"  width="24px" style="text-align: center">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#home" data-rel="close" onclick="myClosewin()" data-role="button"><img src="img/home.png" width="24px" height="24px"> Home</a>
+                        </li>
+                        <li>
+                            <a href="#"  data-rel="close" onclick="myClosewin()"><img src="img/search.png" width="24px" height="24px"> Search</a>
+                        </li>
+                        <li>
+                            <a href="#girl-cate"  data-rel="close" onclick="myClosewin()"><img src="img/categorie.png" width="24px" height="24px"> Categories</a>
+                        </li>
+                        <li>
+                            <a href="#pg1"  data-rel="close" onclick="myClosewin()"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                        </li>
+                        <li class="mg">
+                            <a href="#profile" data-rel="close" onclick="myClosewin()"><img src="img/dp.jpg" class="img-circle" width="100px" height="100px"> <span class="sp">Account</span></a>
+                        </li>
+
+                    </ul>
+
+
+                </div> </div>
+
+            </div>
+
+
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <div data-role="header">
+            <div id="page-content-wrapper" style="background-color: #2abb9c;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-8 bar">
+                            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle" style="background-color:transparent; border: none">
+                                <img src="img/menu.png" width="100%">
+                            </a>
+                            <span class="na">Home</span>
+                        </div>
+
+
+
+                        <div class="col-xs-4">
+                            <img src="img/search.png" width="30px" height="30px" class="srch">
+                            <a href="#basket"> <img src="img/basket.png" width="30px" height="30px" class="baskt"> <span class="badge bg-orange">123</span></a>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!-- end !-->
+
+
+<!-- Sidebar -->
+<div data-role="page" id="pg1">
+
+
+<!-- /#sidebar-wrapper -->
+    <div data-role="header">
+
+
+</div>
+
+<div data-role="main" class="ui-content">
+
+    <div class="container">
+        <div class="row">
+                <div class="ui-block-a">
+                </div>
+               <div class="ui-block-a lg">
+               </div>
+                <div class="ui-block-a">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <div class="panel-content">
+            <img src="img/logo.png" class="logopanel" width="100%" align="center">
+        </div>
+
+        <div class="panel-content">
+            <img src="img/4.png" width="100%" align="center">
+
+            <div class="row">
+
+                <div class="col-xs-6">
+                    <div class="text"><a href="#signup" class="ui-btn cl1">Register</a></div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="text"><a href="#login" class="ui-btn cl2">Login</a> </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+</div>
+
+<div data-role="page" id="signup">
+
+    <div class="container">
+        <div data-role="main">
+            <h1 class="szeh">Signup.</h1>
+
+            <div class="panel-content stl">
+               <!-- <img src="img/logo.png" class="logopanel stl" width="100%" align="center"> -->
+                <form class="plc">
+                    <div class="ui-field-contain lab ">
+                        <label for="fullname">Full name:</label>
+                        <input type="text" name="fullname" id="fullname" placeholder="Enter your full name">
+
+                        <label for="mail">Email Address</label>
+                        <input type="text" name="mail" id="mail" placeholder="Email address">
+
+                        <label for="pas">Password</label>
+                        <input type="password" name="pas" id="pas" placeholder="Your Password">
+                    </div>
+                    <p class="p-bt">Or easily <a href="#"> connect with facebook</a></p>
+                        <div class="row">
+                        <div class="col-xs-6">
+                            <div class=""><a href="#pg1" class="ui-btn bt2">Login</a> </div>
+                        </div>
+                            <div class="col-xs-6">
+                                <div class=""><a href="#" class="ui-btn bt">Registration</a> </div>
+                            </div>
+                        </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div data-role="page" id="login">
+
+    <div class="container">
+        <div data-role="main">
+            <h1 class="szeh">Login.</h1>
+
+            <div class="panel-content stl">
+                <form class="plc">
+                    <div class="ui-field-contain lab ">
+                        <label for="mail">Email Address</label>
+                        <input type="text" name="mail" id="em" placeholder="Email address">
+
+                        <label for="password">Password</label>
+                        <input type="password" name="pas" id="password" placeholder="Your Password">
+                    </div>
+                    <p class="p-bt">Or easily <a href="#"> connect with facebook</a></p>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class=""><a href="#pg1" class="ui-btn bt">Registration</a> </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class=""><a href="#home" class="ui-btn bt2">Login</a> </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!--Home!-->
+<div data-role="page" id="home">
+
+    <!-- /#sidebar-wrapper -->
+    <div data-role="header">
+
+    </div>
+    <div data-role="main" class="pad">
+
+
+        <div class="ui-grid-a grad4 sze1 ">
+
+            <div class="ui-block-a">
+                <h1>Boy’s Fashion</h1>
+            </div>
+            <div class="ui-block-b" style="float: right">
+                <img src="img/1.png">
+            </div>
+        </div>
+        <div class="ui-grid-a grad4 sze1 ">
+
+            <div class="ui-block-a  ">
+                <a href="#girl-cate"> <h1>Girl’s Fashion</h1></a>
+            </div>
+            <div class="ui-block-b" style="float: right">
+                <a href="#girl-cate"> <img src="img/2.png"></a>
+            </div>
+        </div>
+        <div class="ui-grid-a grad4 sze1 ">
+
+            <div class="ui-block-a  ">
+                <h1>Toy's</h1>
+            </div>
+            <div class="ui-block-b"  style="float: right">
+                <img src="img/3.png ">
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+<!--end Home!-->
+
+<!--Girl ceteg !-->
+<div data-role="page" id="girl-cate">
+
+        <!-- /#sidebar-wrapper -->
+        <div data-role="header">
+
+    </div>
+    <div data-role="main" class="ui-content">
+
+
+        <div class="ui-grid-a grad8 sze1 ">
+
+            <div class="ui-block-a">
+                <a href="#womens"><h1>Dresses</h1></a>
+            </div>
+            <div class="ui-block-b" style="float: right">
+                <a href="#womens"><img src="img/girls/1.png"></a>
+            </div>
+        </div>
+        <div class="ui-grid-a grad8 sze1 ">
+
+            <div class="ui-block-a  ">
+                <h1>Shoes</h1>
+            </div>
+            <div class="ui-block-b" style="float: right">
+                <img src="img/girls/1.png">
+            </div>
+        </div>
+        <div class="ui-grid-a grad8 sze1 ">
+
+            <div class="ui-block-a  ">
+                <h1>Toy's</h1>
+            </div>
+            <div class="ui-block-b"  style="float: right">
+                <img src="img/girls/1.png ">
+            </div>
+        </div>
+        <div class="ui-grid-a grad8 sze1 ">
+
+            <div class="ui-block-a ">
+                <h1>Accessories</h1>
+            </div>
+            <div class="ui-block-b" style="float: right">
+                <img src="img/girls/1.png">
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+<!--Girl ceteg !-->
+
+<!-- Womens !-->
+<div data-role="page" id="womens">
+
+    <!-- /#sidebar-wrapper -->
+    <div data-role="header">
+        <div data-role="navbar">
+            <ul class="dis">
+                <li><a href="#">Dresses</a></li>
+                <li><a href="#">Jeans</a></li>
+                <li><a href="#">Suits</a></li>
+                <li><a href="#">Dresses</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div data-role="main" class="ui-content pad">
+
+
+        <div class="ui-grid-a  sze1 ">
+
+            <div class="ui-block-a fnt">
+                <div class="bx1">
+                    <a href="#printedtights"> <img src="img/women/1.png"></a>
+            </div>
+                <h4><a href="#printedtights">Printed tights</a></h4>
+                <p>Rs:500</p>
+            </div>
+
+            <div class="ui-block-b fnt">
+                <div class="bx1">
+                    <img src="img/women/1.png">
+                </div>
+                <h4>Printed tights</h4>
+                <p>Rs:500</p>
+            </div>
+        </div>
+
+        <div class="ui-grid-a  sze1 ">
+
+            <div class="ui-block-a fnt">
+                <div class="bx1">
+                    <img src="img/women/1.png">
+                </div>
+                <h4>Printed tights</h4>
+                <p>Rs:500</p>
+            </div>
+
+            <div class="ui-block-b fnt">
+                <div class="bx1">
+                    <img src="img/women/1.png">
+                </div>
+                <h4>Printed tights</h4>
+                <p>Rs:500</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- end Womens !-->
+
+<!-- Womens tights!-->
+<div data-role="page" id="printedtights">
+
+    <!-- /#sidebar-wrapper -->
+    <div data-role="header">
+
+    </div>
+    <div data-role="main">
+
+                <div class="bx2">
+                    <img src="img/printedtights/1.png">
+                </div>
+        <div class="container">
+        <div class="ui-grid-a txt-btn">
+            <div class="ui-block-a">
+                <a href="#myPopup2" data-rel="popup" id="clr-button" data-role="button" class="ui-btn cl" transition="slideup">Color <i class="fa fa-arrow-up"></i></a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#myPopup" data-rel="popup" id="linkbutton" data-role="button" class="ui-btn sz"  transition="slideup">Size<i class="fa fa-arrow-up"></i></a>
+            </div>
+        </div>
+
+        <div class="ui-grid-a ">
+            <div class="ui-block-a cnt">
+                <h4> Rs :500 <strike><small>Rs:700</small></strike></h4>
+            </div>
+            <div class="ui-block-b clr">
+                <a href="#basket" class="ui-btn"><i class="fa fa-shopping-basket"></i>Purchase</a>
+            </div>
+        </div>
+            <div class="ui-grid-solo ds">
+                <div class="ui-block-a">
+                    <h2>Description</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+        <div data-role="popup" id="myPopup" class="ui-content" data-theme="b" data-content-theme="a">
+
+                <div class=" h">
+                    <h2>Choose a size</h2>
+                </div>
+                <div class="ui-content"></div>
+                <form>
+                    <fieldset data-role="controlgroup" class="b1">
+                        <label class="lb" for="s">Small(s)</label>
+                        <input type="radio" class="favsize" name="favsize" id="s" value="Small (s)">
+                        <label class="lb" for="m">Medium(m)</label>
+                        <input type="radio" class="favsize" name="favsize" id="m" value="Medium (m)">
+                        <label class="lb"  for="l">Large(l)</label>
+                        <input type="radio" class="favsize" name="favsize" id="l" value="Large (l)">
+                    </fieldset>
+                </form>
+
+           <!-- <div class="bxop">
+            </div> !-->
+
+        </div>
+        </div>
+        <div class="container">
+            <div data-role="popup" id="myPopup2" class="ui-content" data-theme="b" data-content-theme="a">
+
+                <div class=" h">
+                    <h2>Choose a Color</h2>
+                </div>
+                <div class="ui-content"></div>
+                <form>
+                    <fieldset data-role="controlgroup" class="b1 b2">
+                        <label class="lb2" for="blk">Black</label>
+                        <input type="radio" class="blc-clr" name="favclr" id="blk" value="Black">
+                    </fieldset>
+
+                    <fieldset data-role="controlgroup" class="b1 b3">
+                    <label class="lb" for="yel">Yellow</label>
+                    <input type="radio" class="yel-clr" name="favclr" id="yel" value="Yellow">
+                    </fieldset>
+                    <fieldset data-role="controlgroup" class="b1 b4">
+                        <label class="lb"  for="blu">Blue</label>
+                        <input type="radio" class="blu-clr" name="favclr" id="blu" value="Blue">
+                    </fieldset>
+
+                </form>
+
+                <!-- <div class="bxop">
+                 </div> !-->
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+<!-- end Womens tights !-->
+
+<!-- Basket !-->
+
+<div data-role="page" id="basket">
+
+    <!-- /#sidebar-wrapper -->
+    <div data-role="header">
+
+    </div>
+    <div data-role="main" class="pad">
+
+        <div class="container">
+            <div class="row br">
+                <div class="col-xs-4 bask">
+
+                    <img src="img/basket/2.png" width="100%">
+                </div>
+                    <div class="col-xs-5 bs">
+                        <h4>Printed tights</h4>
+                        <p><i class="fa fa-square"></i> Black, M</p>
+                        <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <select class="form-control " data-role="none">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-3 sqr">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-3 del">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    </div>
+                <div class="col-xs-3 rs">
+                    <p>Rs:500</p>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row br">
+                <div class="col-xs-4 bask">
+
+                    <img src="img/basket/2.png" width="100%">
+                </div>
+                <div class="col-xs-5 bs">
+                    <h4>Printed tights</h4>
+                    <p><i class="fa fa-square"></i> Black, M</p>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <select class="form-control" data-role="none">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-3 sqr">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-3 del">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-xs-3 rs">
+                    <p>Rs:500</p>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4 bask">
+
+                    <img src="img/basket/2.png" width="100%">
+                </div>
+                <div class="col-xs-5 bs">
+                    <h4>Printed tights</h4>
+                    <p><i class="fa fa-square"></i> Black, M</p>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <select class="form-control" data-role="none">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-3 sqr">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-3 del">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-xs-3 rs">
+                    <p>Rs:500</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="bg1">
+            <div class="container">
+                <div class="row br2">
+                    <div class="col-xs-12 bs">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <h4>Shipping</h4>
+                            </div>
+                            <div class="col-xs-6">
+                                <p>Rs:50</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="row br2">
+                    <div class="col-xs-12 bs">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <h4>Your Total</h4>
+                            </div>
+                            <div class="col-xs-6">
+                                <p>Rs:550</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 clr2">
+                        <a href="#address" class="ui-btn btn-block"><i class="fa fa-shopping-basket"> </i> Place Your Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<!-- Basket end!-->
+
+<!-- Checkout !-->
+
+<!-- Address !-->
+<div data-role="page" id="address">
+
+    <!-- /#sidebar-wrapper -->
+    <div data-role="header">
+        <div data-role="navbar">
+            <ul  class="act">
+                <li><a href="#" class="ui-btn-active ui-state-persist" data-transition="slide">Address</a></li>
+                <li><a href="#" class="disabled">Shipping</a></li>
+            </ul>
+        </div><!-- /navbar -->
+
+    </div>
+    <div data-role="main" class="ui-content">
+
+        <form>
+        <div class="ui-grid-a lbb">
+            <label for="fname">Your name</label>
+                <div class="ui-block-a">
+
+                <div class="tx">
+                    <input type="text" name="fullname" id="fname" placeholder="First Name">
+                </div>
+                </div>
+                <div class="ui-block-b">
+                    <div class="tx2">
+                        <input type="text" name="fullname" id="lname" placeholder="Last Name">
+                    </div>
+                </div>
+        </div>
+            <div class="ui-grid-solo">
+                <div class="ui-block-a tx3 lbb ">
+                    <label for="add">Address</label>
+                    <input type="text" name="line1" id="add" placeholder="Address Line 1">
+                </div>
+            </div>
+            <div class="ui-grid-solo">
+                <div class="ui-block-a tx3">
+                    <input type="text" name="line2" placeholder="Address Line 2">
+                </div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <div class="tx tx4">
+                                <select name="City" id="city">
+                                    <option value="city">City</option>
+                                <option value="Khi">Karachi</option>
+                                <option value="Lhr">Lahore</option>
+                                <option value="Isl">Islamabad</option>
+                                <option value="Hyd">Hydrabad</option>
+                                <option value="KP">Khyber Pakhtunkhwa</option>
+                                </select>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <div class="tx2">
+                        <input type="text" name="fullname" id="zip" placeholder="Zip Code">
+                    </div>
+                </div>
+            </div>
+            <div class="ui-grid-solo">
+                <div class="ui-block-a txt1">
+                    <p>Shipping Options</p>
+                    <p style="color: #f38b4c;">Please ship to another address</p>
+                </div>
+            </div>
+            <div class="ui-grid-solo">
+                <div class="ui-block-a clr">
+                    <a href="#shipping" class="ui-btn btn-block">Next Step</a>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<!-- end Address !-->
+<!-- Shiping !-->
+<div data-role="page" id="shipping">
+
+    <!-- /#sidebar-wrapper -->
+    <div data-role="header">
+        <div data-role="navbar">
+            <ul  class="act">
+                <li><a href="#address">Address</a></li>
+                <li><a href="#" class="ui-btn-active ui-state-persist">Shipping</a></li>
+            </ul>
+        </div><!-- /navbar -->
+
+    </div>
+    <div data-role="main" class="ui-content">
+
+        <form>
+            <div class="ui-grid-solo">
+                <div class="ui-block-a tx5">
+                    <p>Shipping Address <i class="fa fa-pencil-square-o" aria-hidden="true"aria-hidden="true"></i></p>
+                </div>
+            </div>
+            <div class="ui-grid-solo">
+                <div class="ui-block-a tx6">
+                    <p>Abdul Samad</p>
+                    <p>H # 123 near Mashriq Center Karachi</p>
+                    <p>XYZ</p>
+                    <p>Karachi 1234</p>
+                    <p>0333089787</p>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+    <p class="brd"></p>
+    <div data-role="footer">
+        <div class="container">
+            <div class="ui-grid-solo">
+                <div class="ui-block-a clr">
+                    <a href="#" class="ui-btn btn-block">Finish your order</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Shiping !-->
+
+<!--end Checkout !-->
+
+<!-- profile !-->
+<div data-role="page" id="profile">
+
+    <!-- /#sidebar-wrapper -->
+    <div data-role="header">
+        <div data-role="navbar">
+            <ul  class="act">
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </div><!-- /navbar -->
+
+    </div>
+    <div data-role="main" class="ui-content">
+
+        <div class="row">
+            <div class="col-xs-12 pr">
+                <img src="img/dp.jpg" class="img-circle" width="100px" height="100px">
+            </div>
+        </div>
+
+            <div class="row brd1">
+                <div class="col-xs-12 tx6">
+                    <p><span class="fa fa-user-o"></span> Abdul Samad</p>
+                </div>
+                <p class=""></p>
+            </div>
+        <div class="row brd2">
+            <div class="col-xs-12 tx6">
+                <p><span class="fa fa-envelope-o"></span> abdulsamad@demo.com</p>
+            </div>
+            <p class=""></p>
+        </div>
+        <div class="row brd2">
+            <div class="col-xs-12 tx6">
+                <p><span class="fa fa-mobile"></span> +92 300 9999 999</p>
+            </div>
+            <p class=""></p>
+        </div>
+        <div class="row brd2">
+            <div class="col-xs-12 tx6">
+                <a href="#change-pass"><p><span class="fa fa-lock"></span> Change password</p></a>
+            </div>
+            <p class=""></p>
+        </div>
+
+        <div class="ui-grid-solo">
+            <div class="ui-block-a clr lg">
+             <a href="#pg1" class="ui-btn btn-block">  Logout <span class="fa fa-sign-out"></span></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- end profile !-->
+
+
+<!-- change-pass !-->
+<div data-role="page" id="change-pass">
+
+    <!-- /#sidebar-wrapper -->
+    <div data-role="header">
+        <div data-role="navbar">
+            <ul  class="act chnge">
+                <li><a href="#profile"><span class="fa fa-arrow-circle-left"></span></a> </li>
+                <li>Change Password</li>
+            </ul>
+        </div><!-- /navbar -->
+
+    </div>
+    <div data-role="main" class="ui-content">
+
+        <div class="row">
+            <div class="col-xs-12 pr">
+                <img src="img/dp.jpg" class="img-circle" width="100px" height="100px">
+            </div>
+        </div>
+
+        <div class="ui-grid-solo">
+            <div class="ui-block-a">
+                <form>
+                    <div class="ui-field-contain lab " style="padding-top: 71px;">
+                        <label for="new">Current Password</label>
+                        <input type="password" name="mail" id="cur" placeholder="Current Password">
+                        <label for="new">New Password</label>
+                        <input type="password" name="mail" id="new" placeholder="New Password">
+
+                        <label for="ret">Retype Password</label>
+                        <input type="password" name="pas" id="ret" placeholder="Retype Password">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="ui-grid-solo">
+            <div class="ui-block-a clr lg">
+                <a href="#pg1" class="ui-btn btn-block">  Change Password</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- end change-pass !-->
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+
+<script>
+    $(document).on("pageshow","#girl-cate",function(event,data){
+        $('.sid-bar').show();
+        $('.srch').hide();
+        $('.baskt').show();
+        $('.na').text("Girl's Categories");
+    });
+    $(document).on("pageshow","#home",function(event,data){
+        $('.sid-bar').show();
+        $('.baskt').show();
+        $('.srch').show();
+        $('.na').text("Home");
+    });
+    $(document).on("pageshow","#login",function(event,data){
+        $('.sid-bar').hide();
+    });
+    $(document).on("pageshow","#Signup",function(event,data){
+        $('.sid-bar').hide();
+    });
+    $(document).on("pageshow","#pg1",function(event,data){
+        $('.sid-bar').hide();
+    });
+    $(document).on("pageshow","#womens",function(event,data){
+        $('.sid-bar').show();
+        $('.srch').hide();
+        $('.baskt').show();
+        $('.na').text("Womens");
+    });
+    $(document).on("pageshow","#printedtights",function(event,data){
+        $('.sid-bar').show();
+        $('.srch').hide();
+        $('.baskt').show();
+        $('.na').text("Printed tights");
+    });
+    $(document).on("pageshow","#address",function(event,data){
+        $('.sid-bar').show();
+        $('.srch').hide();
+        $('.baskt').show();
+        $('.na').text("Checkout");
+    });
+    $(document).on("pageshow","#shipping",function(event,data){
+        $('.sid-bar').show();
+        $('.srch').hide();
+        $('.baskt').show();
+        $('.na').text("Shipping");
+    });
+    $(document).on("pageshow","#basket",function(event,data){
+        $('.sid-bar').show();
+        $('.srch').hide();
+        $('.baskt').show();
+        $('.na').text("Basket");
+    });
+    $(document).on("pageshow","#profile",function(event,data){
+        $('.sid-bar').show();
+        $('.srch').hide();
+        $('.baskt').hide();
+        $('.bg-orange').hide();
+        $('.na').text("Account details");
+    });
+    $(document).on("pageshow","#change-pass",function(event,data){
+        $('.sid-bar').hide();
+        $('.srch').hide();
+        $('.baskt').hide();
+        $('.bg-orange').hide();
+        $('.na').text("Change Password");
+    });
+
+</script>
+
+<!-- chnge function -->
+<script>
+    $(document).ready(function(){
+        $("#consumed .ui-btn").removeClass("fa fa-arrow-up").addClass("fa fa-arrow-down");
+        $('#s').text('label');
+    });
+
+
+    $(document).on('change', '.favsize', function () {
+        var v = $(this).val();
+        $('#linkbutton').html(v).append($("<i class='fa fa-arrow-down'></i>"));
+    });
+    $(document).on('change', '.blc-clr', function () {
+        var v = $(this).val();
+        $('#clr-button').html("<i class='fa fa-square sq'></i> " + v).append($("<i class='fa fa-arrow-down'></i>"));
+    });
+    $(document).on('change', '.yel-clr', function () {
+        var v = $(this).val();
+        $('#clr-button').html("<i class='fa fa-square ye'></i> " + v).append($("<i class='fa fa-arrow-down'></i>"));
+    });
+    $(document).on('change', '.blu-clr', function () {
+        var v = $(this).val();
+        $('#clr-button').html("<i class='fa fa-square bl'></i> " + v).append($("<i class='fa fa-arrow-down'></i>"));
+    });
+
+
+</script>
+$(this).find($(".fa")).removeClass('fa-chevron-down').addClass('fa-chevron-up');
+</body>
+
+</html>
